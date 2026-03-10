@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ouro Verde Jardinagem</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,40,0,0.65), rgba(0,70,0,0.75)),
+url("74ecec62-9f17-448b-b6d5-15b413aeeae9.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+animation:bgZoom 20s infinite alternate;
+
+}
+
+/* BACKGROUND ZOOM */
+
+@keyframes bgZoom{
+
+from{
+background-size:100%;
+}
+
+to{
+background-size:110%;
+}
+
+}
+
+/* CONTAINER */
+
+.container{
+
+background:rgba(255,255,255,0.94);
+
+padding:45px;
+
+border-radius:14px;
+
+max-width:950px;
+width:90%;
+
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
+
+backdrop-filter:blur(4px);
+
+}
+
+/* TITLE */
+
+h1{
+
+text-align:center;
+
+color:#0f6b2c;
+
+margin-bottom:35px;
+
+font-size:32px;
+
+letter-spacing:1px;
+
+}
+
+/* SERVICES GRID */
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+gap:20px;
+
+}
+
+/* CARD */
+
+.card{
+
+background:white;
+
+padding:22px;
+
+border-radius:10px;
+
+text-align:center;
+
+box-shadow:0 6px 16px rgba(0,0,0,0.15);
+
+transition:0.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px) scale(1.04);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+}
+
+/* PRICE */
+
+.price{
+
+margin-top:10px;
+
+font-weight:bold;
+
+color:#0f6b2c;
+
+font-size:18px;
+
+}
+
+/* BUTTON */
+
+.btn{
+
+display:block;
+
+margin-top:35px;
+
+text-align:center;
+
+background:#25D366;
+
+color:white;
+
+padding:16px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+font-size:19px;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+/* HOVER VERT VIF */
+
+.btn:hover{
+
+background:#00ff6a;
+
+color:#003b12;
+
+transform:scale(1.07);
+
+box-shadow:0 0 20px #00ff6a;
+
+}
+
+/* MOBILE */
+
+@media(max-width:650px){
+
+.container{
+padding:30px;
+}
+
+h1{
+font-size:24px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>🌿 Serviços de Jardinagem</h1>
+
+<div class="services">
+
+<div class="card">
+Corte de Grama
+<div class="price">R$ 50</div>
+</div>
+
+<div class="card">
+Limpeza de Jardim
+<div class="price">R$ 80</div>
+</div>
+
+<div class="card">
+Poda de Árvores
+<div class="price">R$ 100</div>
+</div>
+
+<div class="card">
+Plantio de Flores
+<div class="price">R$ 120</div>
+</div>
+
+<div class="card">
+Manutenção de Jardins
+<div class="price">R$ 150</div>
+</div>
+
+<div class="card">
+Limpeza de Terrenos
+<div class="price">R$ 200</div>
+</div>
+
+</div>
+
+<a class="btn"
+href="https://wa.me/5542999895515?text=Olá%20preciso%20de%20serviço%20de%20jardinagem">
+
+Falar no WhatsApp
+
+</a>
+
+</div>
+
+</body>
+
+</html>
