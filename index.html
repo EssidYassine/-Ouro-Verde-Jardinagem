@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Ouro Verde Jardinagem</title>
 
@@ -14,58 +14,42 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Segoe UI", Arial, sans-serif;
+font-family: Arial, sans-serif;
 }
 
 body{
 
-height:100vh;
-
 background:
-linear-gradient(rgba(0,40,0,0.65), rgba(0,70,0,0.75)),
+linear-gradient(rgba(0,40,0,0.6), rgba(0,70,0,0.7)),
 url("74ecec62-9f17-448b-b6d5-15b413aeeae9.jpg");
 
 background-size:cover;
 background-position:center;
 
+min-height:100vh;
+
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 
-animation:bgZoom 20s infinite alternate;
-
-}
-
-/* BACKGROUND ZOOM */
-
-@keyframes bgZoom{
-
-from{
-background-size:100%;
-}
-
-to{
-background-size:110%;
-}
+padding:20px;
 
 }
 
-/* CONTAINER */
+/* CONTAINER MOBILE */
 
 .container{
 
-background:rgba(255,255,255,0.94);
+width:100%;
+max-width:420px;
 
-padding:45px;
+background:rgba(255,255,255,0.95);
 
-border-radius:14px;
+border-radius:16px;
 
-max-width:950px;
-width:90%;
+padding:25px;
 
-box-shadow:0 25px 60px rgba(0,0,0,0.5);
-
-backdrop-filter:blur(4px);
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
 
 }
 
@@ -75,25 +59,23 @@ h1{
 
 text-align:center;
 
+font-size:22px;
+
 color:#0f6b2c;
 
-margin-bottom:35px;
-
-font-size:32px;
-
-letter-spacing:1px;
+margin-bottom:20px;
 
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 
 .services{
 
-display:grid;
+display:flex;
 
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+flex-direction:column;
 
-gap:20px;
+gap:12px;
 
 }
 
@@ -101,25 +83,29 @@ gap:20px;
 
 .card{
 
-background:white;
+background:#ffffff;
 
-padding:22px;
+padding:16px;
 
 border-radius:10px;
 
-text-align:center;
+display:flex;
 
-box-shadow:0 6px 16px rgba(0,0,0,0.15);
+justify-content:space-between;
 
-transition:0.35s;
+align-items:center;
+
+font-size:16px;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.12);
+
+transition:0.25s;
 
 }
 
 .card:hover{
 
-transform:translateY(-8px) scale(1.04);
-
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transform:scale(1.03);
 
 }
 
@@ -127,23 +113,19 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 
 .price{
 
-margin-top:10px;
+color:#0f6b2c;
 
 font-weight:bold;
 
-color:#0f6b2c;
-
-font-size:18px;
-
 }
 
-/* BUTTON */
+/* WHATSAPP BUTTON */
 
 .btn{
 
 display:block;
 
-margin-top:35px;
+margin-top:20px;
 
 text-align:center;
 
@@ -153,19 +135,17 @@ color:white;
 
 padding:16px;
 
-border-radius:8px;
+border-radius:10px;
+
+font-size:18px;
 
 text-decoration:none;
 
-font-size:19px;
-
-font-weight:600;
+font-weight:bold;
 
 transition:0.3s;
 
 }
-
-/* HOVER VERT VIF */
 
 .btn:hover{
 
@@ -173,23 +153,35 @@ background:#00ff6a;
 
 color:#003b12;
 
-transform:scale(1.07);
-
-box-shadow:0 0 20px #00ff6a;
-
 }
 
-/* MOBILE */
+/* FLOAT WHATSAPP */
 
-@media(max-width:650px){
+.float{
 
-.container{
-padding:30px;
-}
+position:fixed;
 
-h1{
-font-size:24px;
-}
+bottom:20px;
+right:20px;
+
+background:#25D366;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:26px;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 
 }
 
@@ -197,43 +189,42 @@ font-size:24px;
 
 </head>
 
-
 <body>
 
 <div class="container">
 
-<h1>🌿 Serviços de Jardinagem</h1>
+<h1>🌿 Ouro Verde Jardinagem</h1>
 
 <div class="services">
 
 <div class="card">
-Corte de Grama
-<div class="price">R$ 50</div>
+<span>Corte de Grama</span>
+<span class="price">R$50</span>
 </div>
 
 <div class="card">
-Limpeza de Jardim
-<div class="price">R$ 80</div>
+<span>Limpeza de Jardim</span>
+<span class="price">R$80</span>
 </div>
 
 <div class="card">
-Poda de Árvores
-<div class="price">R$ 100</div>
+<span>Poda de Árvores</span>
+<span class="price">R$100</span>
 </div>
 
 <div class="card">
-Plantio de Flores
-<div class="price">R$ 120</div>
+<span>Plantio de Flores</span>
+<span class="price">R$120</span>
 </div>
 
 <div class="card">
-Manutenção de Jardins
-<div class="price">R$ 150</div>
+<span>Manutenção de Jardins</span>
+<span class="price">R$150</span>
 </div>
 
 <div class="card">
-Limpeza de Terrenos
-<div class="price">R$ 200</div>
+<span>Limpeza de Terrenos</span>
+<span class="price">R$200</span>
 </div>
 
 </div>
@@ -247,6 +238,12 @@ Falar no WhatsApp
 
 </div>
 
-</body>
+<a class="float"
+href="https://wa.me/5542999895515">
 
+💬
+
+</a>
+
+</body>
 </html>
